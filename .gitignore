@@ -1,7 +1,0 @@
-.vagrant/
-*.log
-*.box
-*.pem
-.DS_Store
-.idea/
-.vscode/
