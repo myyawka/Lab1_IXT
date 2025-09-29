@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   # Specify the base box to use
   config.vm.box = "generic/centos9s"
   # Forward port 80 on the guest to port 8888 on the host
-  config.vm.network "forwarded_port", guest: 80, host: 8888, host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest: 80, host: 8888, auto_correct: true
   # Sync local folder "./www-content" to "/var/www/html" on the guest using rsync
   config.vm.synced_folder "./www-content", "/var/www/html", type: "rsync", rsync__auto: true
   # Provision the VM with a shell script
